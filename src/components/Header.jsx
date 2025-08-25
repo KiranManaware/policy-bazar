@@ -305,9 +305,6 @@ const Header = () => {
       >
         {drawer}
       </Drawer>
-
-      {/* Spacer to prevent content from hiding behind fixed header */}
-      <Box sx={{ height: 80 }} />
     </>
   );
 };

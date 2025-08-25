@@ -377,22 +377,7 @@ const HeroSection = () => {
                       zIndex: 4,
                     }}
                   >
-                                          <Paper
-                        sx={{
-                          width: 140,
-                          height: 90,
-                          background: 'rgba(255, 255, 255, 0.95)',
-                          backdropFilter: 'blur(20px)',
-                          border: '1px solid rgba(255, 255, 255, 0.2)',
-                          borderRadius: 3,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-                        }}
-                      >
-                        <TrendingUp sx={{ color: 'rgba(172, 125, 255, 0.6)', fontSize: 32 }} />
-                      </Paper>
+                                        
                   </motion.div>
 
                   {/* Enhanced Main hero card */}
@@ -418,7 +403,6 @@ const HeroSection = () => {
                         position: 'relative',
                         overflow: 'hidden',
                         boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
-                        border:"1px solid red",
                         p: 4,
                       }}
                     >

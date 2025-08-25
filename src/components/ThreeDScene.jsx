@@ -15,7 +15,7 @@ import {
   Text,
   RoundedBox,
   Cylinder,
-  Octahedron,
+  Octahedron,                                                                         
 } from '@react-three/drei';
 import * as THREE from 'three';
 

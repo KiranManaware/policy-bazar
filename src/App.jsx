@@ -8,6 +8,7 @@ import FeaturesSection from './components/FeaturesSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import InsureAi from './components/InsureAi';
 
 // Custom theme inspired by ACKO's design - modern, minimalist with purple focus
 const theme = createTheme({
@@ -158,6 +159,7 @@ function App() {
         <FeaturesSection />
         <CTASection />
         <Footer />
+        <InsureAi/>
       </Box>
     </ThemeProvider>
   );

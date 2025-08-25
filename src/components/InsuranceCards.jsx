@@ -15,18 +15,23 @@ import {
   Favorite,
   DirectionsCar,
   Home,
-  Add,
-  ArrowForward,
-  Shield,
-  LocalHospital,
+  Flight,
+  Pets,
+  School,
+  BusinessCenter,
   Security,
-  House,
+  Savings,
+  Anchor,
+  Grass,
+  ArrowForward,
+  Add,
 } from '@mui/icons-material';
-
 const InsuranceCards = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, -50]);
+
+ 
 
   const insuranceCategories = [
     {
@@ -34,7 +39,7 @@ const InsuranceCards = () => {
       title: 'Health Insurance',
       description: '100% bills covered',
       icon: <HealthAndSafety sx={{ fontSize: 32 }} />,
-      gradient: 'linear-gradient(90deg, #AC7DFF 0%, #7C4DFF 100%)',
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
       glowColor: '#AC7DFF',
       cta: 'No room rent limit',
       features: ['Comprehensive Coverage', 'Cashless Treatment', 'Pre & Post Hospitalization'],
@@ -45,35 +50,124 @@ const InsuranceCards = () => {
       title: 'Life Insurance',
       description: 'Flexible coverage',
       icon: <Favorite sx={{ fontSize: 32 }} />,
-      gradient: 'linear-gradient(90deg, #AC7DFF 0%, #7C4DFF 100%)',
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
       glowColor: '#AC7DFF',
       cta: 'Get Quote',
       features: ['Term Life', 'Whole Life', 'Critical Illness'],
-      color: '#AC7DFF',
+      color: '#FF7E5F',
     },
     {
       id: 'vehicle',
       title: 'Vehicle Insurance',
       description: 'Buy or renew policy',
       icon: <DirectionsCar sx={{ fontSize: 32 }} />,
-      gradient: 'linear-gradient(90deg, #AC7DFF 0%, #7C4DFF 100%)',
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
       glowColor: '#AC7DFF',
       cta: 'Up to ₹600 off',
       features: ['Comprehensive', 'Third Party', 'Zero Depreciation'],
-      color: '#AC7DFF',
+      color: '#36D1DC',
     },
     {
       id: 'home',
       title: 'Home Insurance',
       description: 'Protect your haven',
       icon: <Home sx={{ fontSize: 32 }} />,
-      gradient: 'linear-gradient(90deg, #AC7DFF 0%, #7C4DFF 100%)',
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
       glowColor: '#AC7DFF',
       cta: 'Secure Now',
       features: ['Building Coverage', 'Contents Protection', 'Natural Disasters'],
-      color: '#AC7DFF',
+      color: '#FFB75E',
+    },
+    {
+      id: 'travel',
+      title: 'Travel Insurance',
+      description: 'Safe trips worldwide',
+      icon: <Flight sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Buy Now',
+      features: ['Medical Emergencies', 'Trip Cancellation', 'Lost Baggage'],
+      color: '#00C9FF',
+    },
+    {
+      id: 'pet',
+      title: 'Pet Insurance',
+      description: 'Care for your furry friends',
+      icon: <Pets sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Protect Now',
+      features: ['Vet Bills', 'Accident Cover', 'Surgery Coverage'],
+      color: '#FF9A9E',
+    },
+    {
+      id: 'education',
+      title: 'Education Insurance',
+      description: 'Secure your child’s future',
+      icon: <School sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Plan Today',
+      features: ['Child Plans', 'Higher Studies', 'Savings Growth'],
+      color: '#43CEA2',
+    },
+    {
+      id: 'business',
+      title: 'Business Insurance',
+      description: 'Protect your enterprise',
+      icon: <BusinessCenter sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Cover Risks',
+      features: ['Property Damage', 'Liability Cover', 'Employee Benefits'],
+      color: '#FF6A00',
+    },
+    {
+      id: 'cyber',
+      title: 'Cyber Insurance',
+      description: 'Stay safe online',
+      icon: <Security sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Secure Data',
+      features: ['Data Breach', 'Hacking Cover', 'Fraud Protection'],
+      color: '#12C2E9',
+    },
+    {
+      id: 'retirement',
+      title: 'Retirement Insurance',
+      description: 'Plan your golden years',
+      icon: <Savings sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Start Saving',
+      features: ['Pension Plans', 'Annuity Cover', 'Long-Term Savings'],
+      color: '#F7971E',
+    },
+    {
+      id: 'marine',
+      title: 'Marine Insurance',
+      description: 'Protect cargo & ships',
+      icon: <Anchor sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Get Marine Cover',
+      features: ['Cargo Loss', 'Ship Damage', 'Port Risks'],
+      color: '#2980B9',
+    },
+    {
+      id: 'agriculture',
+      title: 'Agriculture Insurance',
+      description: 'Protect your crops',
+      icon: <Grass sx={{ fontSize: 32 }} />,
+      gradient: 'linear-gradient(90deg, rgba(172, 125, 255, 0.5) 0%, rgba(124, 77, 255, 0.5) 100%)',
+      glowColor: '#AC7DFF',
+      cta: 'Cover Crops',
+      features: ['Crop Loss', 'Weather Damage', 'Farmland Protection'],
+      color: '#56ab2f',
     },
   ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -176,9 +270,9 @@ const InsuranceCards = () => {
             </motion.div>
           </Box>
 
-          <Grid container  rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 10 }} >
+          <Grid container  rowSpacing={6} columnSpacing={{ xs: 1, sm: 2, md: 4 }} >
             {insuranceCategories.map((category, index) => (
-              <Grid size={4} item key={category.id}>
+              <Grid size={3} item key={category.id}>
                 <motion.div
                   variants={cardVariants}
                   whileHover={{ 
@@ -191,10 +285,13 @@ const InsuranceCards = () => {
                 >
                   <Card
                     sx={{
-                      height: '100%',
+                      height:"500px",
+                      // height: '100%',
+                      
                       background: 'rgba(39, 27, 69, 0.8)',
                       backdropFilter: 'blur(10px)',
                       border: `1px solid ${hoveredCard === category.id ? category.glowColor + '40' : 'rgba(172, 125, 255, 0.1)'}`,
+                      // border:"1px solid red",
                       borderRadius: 4,
                       overflow: 'hidden',
                       position: 'relative',
@@ -206,8 +303,6 @@ const InsuranceCards = () => {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        background: category.gradient,
-                        opacity: hoveredCard === category.id ? 0.1 : 0,
                         transition: 'opacity 0.3s ease',
                         zIndex: -1,
                       },
@@ -218,9 +313,7 @@ const InsuranceCards = () => {
                         left: -2,
                         right: -2,
                         bottom: -2,
-                        background: category.gradient,
                         borderRadius: 6,
-                        opacity: hoveredCard === category.id ? 0.3 : 0,
                         filter: 'blur(10px)',
                         transition: 'opacity 0.3s ease',
                         zIndex: -2,
@@ -395,12 +488,10 @@ const InsuranceCards = () => {
                     fontWeight: 600,
                     borderRadius: 3,
                     textTransform: 'none',
-                    boxShadow: '0 8px 25px rgba(172, 125, 255, 0.4)',
-                    '&:hover': {
-                      background: 'linear-gradient(90deg, #B794FF 0%, #9B6CFF 100%)',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 12px 35px rgba(172, 125, 255, 0.6)',
-                    },
+                   '&:hover': {
+                        background: 'linear-gradient(90deg, #B794FF 0%, #9B6CFF 100%)',
+                        transform: 'translateY(-2px)',
+                      },
                     transition: 'all 0.3s ease',
                   }}
                 >
